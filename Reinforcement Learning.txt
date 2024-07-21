@@ -1,0 +1,47 @@
+Reinforcement Learning
+
+> RL is teaching a software agent how to behave in an environment by telling it how good it is doing.
+
+Deep Q Learning
+
+This approach extends reinforcement learning by using deep neural network to predict the actions.
+
+[Agent]
+- Game and Model used for training:
+> state = get_state(game)
+> action = get_move(state)
+>   model.predict()
+> reward, game_over,score = game.play(step)
+> new_state = get_state(game)
+> remember
+> model.train()
+
+[Game]
+- Play step
+- Get rewards
+- Game over
+- Score
+[Model]
+- Predictions
+- Linear_QNet (DWN)
+- Model.predict(state)
+-   > Action
+
+[State : 11 values]
+[ Danger straight, danger right, danger left
+direction left, right, up, down
+food left, right, up, down]
+
+[MODEL]
+{11x states input} -> hidden model layers -> {3 action outputs}
+(DEEP) Q Learning
+
+Q Value = quality of action
+0) Init Q Value (random parameters)
+1) Choose action (model.predict(state))
+2) Perform action
+3) Measure reward
+4) Update Q value ( + train model)
+
+Bellman equation (for updating the Q value)
+
